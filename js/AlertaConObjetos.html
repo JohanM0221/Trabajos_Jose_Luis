@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alertas</title>
+</head>
+<body>
+    <h2> Alertas con Html y JavaScript</h2>
+
+    <input type="button" value="Mensaje" onclick="mensaje()">
+    <hr>
+    <p> Alerta al presionar checkbox</p>
+    <input type="checkbox" name="presion" onclick="presion()">
+    <hr>
+    <p>Escribir con JavaScript</p>
+    <input type="button" value="Escribe el mensaje" onclick="document.write('Buenas.')";>
+    <hr>
+    <p> Vinculos con alertas</p>
+    <a href="javascript:alert('has llegado a una alerta'); ">"Darle click</a>
+    <hr>
+    <a href="javascript:window.print();">Imprimir pantalla</a>
+    <hr>
+    <p>Alerta con opciones aceptar y cancelar</p>
+    <a href="#" onclick="salir()">Salir de la practica</a>
+
+    <script>
+        function mensaje(){
+            alert("Esto es una alerta creada con una funcion con JavaScript");
+        }
+    </script>
+    <script>
+        function presion (){
+            alert("Le has dado click al checkbox");
+        }
+    </script>
+    <script>
+        function salir(){
+            var salir=confirm ("¿Deseas salir de la practica?")
+            if (salir) {
+                alert ("Gracias, estas saliendo de la pagina...")
+                window .location = "http://google.com.mx";
+            }
+            else{
+                alert ("Gracias, sigues con nosotros")
+            }
+        }
+    </script>
+</body>
+</html>
